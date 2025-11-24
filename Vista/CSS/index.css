@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Fondo y estructura */
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header.hero {
+    background: #003366;
+    color: #fff;
+    padding: 15px 20px;
+}
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+header .navbar a:hover {
+    text-decoration: underline;
+}
+.logo {
+    height: 90px;
+}
+.banner{
+  width: 100%;
+}
+
+/* ACTION CARDS */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: -50px auto 40px;
+}
+
+.action-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+  transform: scale(1.05);
+}
+
+.action-card i {
+  font-size: 32px;
+  color: #4B0082;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  font-weight: bold;
+  color: #003366;
+}
+
+/* PET GRID */
+.pets {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.pets h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #4B0082;
+}
+
+.pets p {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.pet-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.03);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pet-card p {
+  padding: 10px;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* FOOTER */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Responsive: mostrar hamburguesa y ocultar links */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
